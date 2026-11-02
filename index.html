@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050b24">
+<meta name="description" content="Make your Novera frame. Lotus University Volunteer Team.">
+<title>Novera Volunteer Team</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Cairo:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <img src="logo.jpg" alt="Novera logo" class="logo">
+  <div>
+    <h1>Novera</h1>
+    <p>Lotus University · Volunteer Team</p>
+  </div>
+</header>
+
+<main class="app">
+  <section class="stage" id="stage">
+    <canvas id="frame" aria-label="Frame preview"></canvas>
+    <p class="hint" id="hint">Tap the frame to add your photo</p>
+  </section>
+
+  <section class="panel">
+    <h2>Make your frame</h2>
+    <p class="sub">One frame. One team. One unforgettable year.</p>
+
+    <button class="drop" id="drop" type="button">
+      <strong>Your Photo</strong>
+      <span>Choose one, or drop it here</span>
+    </button>
+    <input type="file" id="file" accept="image/*" hidden>
+
+    <label class="field">Your Name
+      <input id="name" type="text" maxlength="30" placeholder="Your Name" autocomplete="off">
+    </label>
+
+    <div class="field">
+      <span class="row">Zoom <em><b id="zoomVal">1.00</b>×  <button type="button" id="reset" class="link">Reset</button></em></span>
+      <input id="zoom" type="range" min="1" max="3" step="0.01" value="1">
+    </div>
+
+    <div class="field">Format
+      <div class="seg" id="formats">
+        <button type="button" data-v="square" class="on">Square</button>
+        <button type="button" data-v="portrait">Portrait</button>
+        <button type="button" data-v="story">Story</button>
+      </div>
+    </div>
+
+    <div class="field">Theme
+      <div class="seg" id="themes">
+        <button type="button" data-v="navy" class="on">Navy</button>
+        <button type="button" data-v="ocean">Ocean</button>
+        <button type="button" data-v="light">Light</button>
+      </div>
+    </div>
+
+    <button class="go" id="download" type="button">Download Frame</button>
+  </section>
+</main>
+
+<footer class="foot">Made for the Novera Volunteer Team · Lotus University, Minya</footer>
+<script src="script.js"></script>
+</body>
+</html>
